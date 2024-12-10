@@ -30,8 +30,7 @@
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
                         </div>
-                        <div class="small-box-footer"> <i
-                                class="fas fa-none"></i></div>
+                        <div class="small-box-footer"> <i class="fas fa-none"></i></div>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -46,8 +45,7 @@
                         <div class="icon">
                             <i class="ion ion-cash"></i>
                         </div>
-                        <a href="#" class="small-box-footer"> <i
-                                class="fas fa-none"></i></a>
+                        <a href="#" class="small-box-footer"> <i class="fas fa-none"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -62,8 +60,10 @@
                         <div class="icon">
                             <i class="fas fa-cubes"></i>
                         </div>
-                        <a href="{{ route('produk') }}" class="small-box-footer">Selengkapnya <i
-                                class="fas fa-arrow-circle-right"></i></a>
+                        @if (Auth::user()->is_admin)
+                            <a href="{{ route('produk') }}" class="small-box-footer">Selengkapnya <i
+                                    class="fas fa-arrow-circle-right"></i></a>
+                        @endif
                     </div>
                 </div>
                 <!-- ./col -->
@@ -72,8 +72,9 @@
                     <div class="small-box bg-danger">
                         <div class="inner">
                             <h3>{{ DB::table('users')->count() }}</h3>
-
-                            <p>Akun</p>
+                            @if (Auth::user()->is_admin)
+                                <p>Kelola Akun</p>
+                            @endif
                         </div>
                         <div class="icon">
                             <i class="ion ion-person"></i>
