@@ -17,4 +17,13 @@
             <i class="fas fa-eye"></i>
         </span>
     </a>
-</div>
+    <form action="{{ route('servis-nota', $data->id) }}" method="GET">
+        @csrf
+        <button type="submit" id="tombol-nota" class="btn btn-secondary btn-icon-split mb-4 mr-2" title="nota"
+            data-toggle="modal" data-target="#modal-nota-transaksi" data-id="{{ $data->id }}">
+            <span class="icon text-white-50">
+                <i class="fas fa-download"></i>
+            </span>
+        </button>
+    </form>
+    </div>

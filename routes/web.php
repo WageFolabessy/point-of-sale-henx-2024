@@ -128,6 +128,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/kasir_servis/edit_transaksi/{id}', 'edit');
         Route::post('/kasir_servis/update_transaksi/{id}', 'update');
         Route::delete('/kasir_servis/hapus_transaksi/{id}', 'destroy');
+        Route::get('/kasir_servis/cetak-nota/{id}', 'cetakNota')->name('servis-nota');
     });
 
     Route::controller(LaporanPulsaPaket::class)->group(function () {

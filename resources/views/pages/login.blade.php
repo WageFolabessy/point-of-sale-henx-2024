@@ -21,7 +21,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="/masuk"><b>Point of Sale</b> Henx's</a>
+            <a href="/masuk"><b>Point of Sale <br></b> Henx's Servis</a>
         </div>
         <!-- /.login-logo -->
         <div class="card">

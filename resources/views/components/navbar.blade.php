@@ -1,6 +1,6 @@
 <!-- Preloader -->
 <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="{{ asset('assets/plugins/adminlte/img/AdminLTELogo.png') }}" alt="AdminLTELogo"
+    <img class="animation__shake" src="{{ asset('logo.png') }}" alt="Logo"
         height="60" width="60" />
 </div>
 

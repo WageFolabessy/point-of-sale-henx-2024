@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Validator;
 use Carbon\Carbon;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class KasirServisController extends Controller
 {
@@ -140,5 +141,15 @@ class KasirServisController extends Controller
         return response()->json([
             'message' => 'Transaksi berhasil dihapus'
         ]);
+    }
+
+    public function cetakNota($id)
+    {
+        $kasirServis = KasirServis::with('kasirServisKeluhans')->findOrFail($id);
+
+        $totalBiaya = $kasirServis->kasirServisKeluhans->sum('biaya');
+
+        $pdf = PDF::loadView('pages.nota-servis', compact('kasirServis', 'totalBiaya'));
+        return $pdf->stream('nota.pdf'); // Atau ->download('nota.pdf') untuk mendownload langsung
     }
 }
