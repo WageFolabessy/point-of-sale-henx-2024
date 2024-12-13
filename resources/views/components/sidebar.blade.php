@@ -4,7 +4,7 @@
     <a href="/" class="brand-link">
         <img src="{{ asset('logo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: 0.8" />
-        <span class="brand-text font-weight-light">Henx's Sevis</span>
+        <span class="brand-text font-weight-light">Henx's Servis</span>
     </a>
 
     <!-- Sidebar -->
@@ -103,7 +103,7 @@
                                 <a href="{{ route('pengeluaran') }}"
                                     class="nav-link {{ request()->is('pengeluaran') ? 'active' : '' }}">
                                     <i class="fas fa-dollar-sign nav-icon"></i>
-                                    <p>Pengularan</p>
+                                    <p>Pengeluaran</p>
                                 </a>
                             </li>
                         @endcan
